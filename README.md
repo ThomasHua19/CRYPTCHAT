@@ -27,5 +27,12 @@ Maintenant, on démarre le serveur local avec la commande (Toujours dans le doss
 
 
 Depuis un navigateur web:
-  Tapez localhost:8000
+  Tapez localhost:8000 pour consulter le site
   
+
+Si difficulté, veuillez suivre les tutos suivants :
+#Environnement virtuel Python
+https://www.youtube.com/watch?v=APOPm01BVrk
+
+#Clone projet Django
+https://youtu.be/2iRKKerjB7o
