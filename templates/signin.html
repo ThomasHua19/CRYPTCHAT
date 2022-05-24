@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="utf-8">
+        <title>S'enregistrer</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'CRYPTCHAT_SIGN_IN.css' %}">
+
+    </head>
+
+    <body>
+
+        <!-- En-tête de la page -->
+		<header class="header">
+			<h1>CRYPTCHAT</h1>
+		</header>
+		
+		<!-- Le navbar -->
+		<ul class="topnav">
+			<li><a href="/">Home</a></li>
+			<li class="right"><a class="active" href="/signin">Sign In</a></li>
+			<li class="right"><a href="/signup">Sign Up</a></li>
+		</ul>
+
+        <form action="/signin" method="POST">
+        {% csrf_token %}
+            <h3>Connect your account</h3>
+            <br>
+            <label for="">Username</label> 
+            <input type="text" id="username" name="username" placeholder="Your username" required>
+            <br>
+
+            <label for="">Password</label> 
+            <input type="password" id="password" name="password" placeholder="Your password" required>
+            <br>
+
+            <button type="submit">Sign in</button>
+
+        </form>
+
+
+
+    </body>
+
+
+
+
+
+
+</html>

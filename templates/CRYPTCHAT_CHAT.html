@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        	<meta charset="utf-8" />
+		    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			{% load static %}
+        	<link rel="stylesheet" href="{% static 'CRYPTCHAT_CHAT.css' %}">
+        	<title>CRYPTCHAT</title>
+	</head>
+
+	<body>
+
+		<!-- En-tête de la page -->
+		<header class="header">
+			<h1>CRYPTCHAT</h1>
+		</header>
+		
+		<!-- Le navbar -->
+		<ul class="topnav">
+			<li><a class="active" href="/">Home</a></li>
+		</ul>  
+
+
+        <h3>Welcome to CRYPTCHAT</h3>
+
+        {% if user.is_authenticated %}
+        <h3>Hello, {{ name }}</h3>
+        <h3>Nice to see you !</h3>
+
+        {% else %}
+        <button type="submit"><a href="/signup"></a>Sign out</button>
+        <button type="submit"><a href="/signin"></a>Sign in</button>
+
+        {% endif %}
+
+
+		<form id="post-form" method="POST" action="checkview">
+			{% csrf_token %}
+			<label>Room</label>
+			<input type="text" name="room_name" id="room_name" width="100px" placeholder="Enter the room" required/>
+			<button type="submit">Enter</button>
+		</form>
+
+
+	</body>
+</html>

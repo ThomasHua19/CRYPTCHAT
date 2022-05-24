@@ -1,0 +1,30 @@
+#Herbergement via APACHE avec le mod_wsgi
+ServerName localhost:80
+
+
+LoadFile "C:/Users/Thomas/AppData/Local/Programs/Python/Python310/python310.dll"
+LoadModule wsgi_module "C:/Users/Thomas/AppData/Local/Programs/Python/Python310/lib/site-packages/mod_wsgi/server/mod_wsgi.cp310-win_amd64.pyd"
+WSGIPythonHome "C:/Users/Thomas/AppData/Local/Programs/Python/Python310"
+
+
+
+WSGIScriptAlias / "C:/Users/Thomas/Desktop/Projet/CRYPCHAT/CRYPCHAT/wsgi.py"
+
+WSGIPythonPath "C:/Users/Thomas/Desktop/Projet/CRYPCHAT"
+Alias /media/ "C:/Users/Thomas/Desktop/Projet/CRYPCHAT/media/"
+Alias /static/ "C:/Users/Thomas/Desktop/Projet/CRYPCHAT/static/"
+
+<Directory "C:/Users/Thomas/Desktop/Projet/CRYPCHAT/static">
+    Require all granted
+</Directory>
+
+<Directory "C:/Users/Thomas/Desktop/Projet/CRYPCHAT/media">
+    Require all granted
+</Directory>
+
+
+<Directory "C:/Users/Thomas/Desktop/Projet/CRYPCHAT/CRYPCHAT">
+    <Files wsgi.py>
+        Require all granted
+    </Files>
+</Directory>

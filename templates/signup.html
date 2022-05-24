@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>S'enregistrer</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'CRYPTCHAT_SIGN_UP.css' %}"/>
+
+    </head>
+
+    <body>
+
+        <!-- En-tête de la page -->
+		<header class="header">
+			<h1>CRYPTCHAT</h1>
+		</header>
+		
+		<!-- Le navbar -->
+		<ul class="topnav">
+			<li><a href="/">Home</a></li>
+			<li class="right"><a href="/signin">Sign In</a></li>
+			<li class="right"><a class="active" href="/signup">Sign Up</a></li>
+		</ul>
+
+        <h3>Create your account</h3>
+        
+        <form action="/signup" method="POST">
+        {% csrf_token %}
+            <label for="">Username</label> 
+            <input type="text" id="username" name="username" placeholder="Add your username" required>
+            <br>
+            <label for="">First Name</label> 
+            <input type="text" id="Name" name="Name" placeholder=" Add your first name" required>
+            <br>
+            <label for="">Last Name</label> 
+            <input type="text" id="Last_Name" name="Last_Name" placeholder=" Add your last name" required>
+            <br>
+            <label for="">Email</label> 
+            <input type="email" id="Email" name="Email" placeholder=" Add your email" required>
+            <br>
+            <label for="">Password</label> 
+            <input type="password" id="password" name="password" placeholder=" Add your password" required>
+            <br>
+            <label for="">Confirm your password</label> 
+            <input type="password" id="c_password" name="c_password" placeholder="Confirm your password" required>
+            <br>
+            <button type="button" class="cancelbtn">Cancel</button>
+            <button type="submit">Sign up</button>
+            <br>
+        </form>
+
+ 
+
+    </body>
+
+</html>
