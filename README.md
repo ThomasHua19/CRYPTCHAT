@@ -1,8 +1,8 @@
 # CRYPTCHAT
 Veuillez consulez README.md en ligne de code
+Je serai sous Windows 10 pour l'installation du projet.
 
 Pour pouvoir tester notre projet, il vous faudra installer :
-Je serai sous Windows 10 pour l'installation du projet.
 -Python 3.10 via le site
 -Git
 
